@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Configuración principal de la aplicación -->
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher_app"
+        android:label="@string/nombreapp"
+        android:roundIcon="@mipmap/ic_launcher_app_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Taller2"
+        tools:targetApi="31">
+
+        <!-- Pantalla de inicio (Splash Screen) que lanza la app -->
+        <activity
+            android:name=".Activity.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Actividades principales de la aplicación -->
+        <activity android:name=".Activity.MainActivity" android:exported="false"/>
+        <activity android:name=".Activity.LoginActivity" android:exported="false"/>
+        <activity android:name=".Activity.RegistroActivity" android:exported="false"/>
+        <activity android:name=".Activity.PerfilFragment" android:exported="false"/>
+        <activity android:name=".Activity.RecuContraActivity" android:exported="false"/>
+
+        <!-- Pre-carga de fuentes personalizadas -->
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+</manifest>

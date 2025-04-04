@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/perfilFragment">
+
+    <fragment
+        android:id="@+id/perfilFragment"
+        android:name="com.example.taller2.Fragment.PerfilFragment"
+        android:label="Perfil"
+        tools:layout="@layout/fragment_perfil">
+        <action
+            android:id="@+id/action_PerfilFragment_to_EditarFragment"
+            app:destination="@id/editarFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/editarFragment"
+        android:name="com.example.taller2.Fragment.EditarFragment"
+        android:label="Editar Perfil"
+        tools:layout="@layout/fragment_editar" />
+</navigation>
